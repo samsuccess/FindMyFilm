@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_upcoming"
@@ -18,17 +19,25 @@
             android:id="@+id/image_upcoming"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_view"
-            android:scaleType="fitCenter"
-            tools:src="@drawable/kutsa_vadi_3" />
+            android:src="@drawable/kutsa_vadi_3" />
+
+        <TextView
+            android:id="@+id/title_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_text"
+            android:textSize="@dimen/text_size"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:text="@string/title_up" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_text"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
-            tools:text="date" />
+            android:layout_gravity="center"
+            android:text="@string/date" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

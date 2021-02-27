@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_play_now"
@@ -18,16 +19,23 @@
             android:id="@+id/image_play_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_view"
-            tools:src="@drawable/image2" />
+            android:src="@drawable/image2" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_text"
+            android:textSize="@dimen/text_size"
+            android:textStyle="italic"
+            android:text="@string/title_play" />
 
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_text"
+            android:paddingStart="@dimen/padding_text"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
-            tools:text="date" />
+            android:text="@string/year" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

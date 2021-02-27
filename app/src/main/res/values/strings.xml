@@ -5,4 +5,8 @@
     <string name="home">Home</string>
     <string name="favorites">Favorites</string>
     <string name="ratings">Ratings</string>
+    <string name="title_play">Title Play</string>
+    <string name="title_up">Title Up</string>
+    <string name="date">date</string>
+    <string name="year">year</string>
 </resources>
