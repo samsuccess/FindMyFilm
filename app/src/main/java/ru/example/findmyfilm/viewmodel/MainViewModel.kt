@@ -1,4 +1,4 @@
-package ru.example.findmyfilm.ui.main
+package ru.example.findmyfilm.viewmodel
 
 import androidx.lifecycle.ViewModel
 

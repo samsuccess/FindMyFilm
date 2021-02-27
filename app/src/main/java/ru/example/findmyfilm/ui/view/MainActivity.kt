@@ -1,8 +1,8 @@
-package ru.example.findmyfilm
+package ru.example.findmyfilm.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.example.findmyfilm.ui.main.MainFragment
+import ru.example.findmyfilm.R
 
 class MainActivity : AppCompatActivity() {
 

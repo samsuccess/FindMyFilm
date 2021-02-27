@@ -5,16 +5,106 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.view.MainFragment">
 
     <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
+        android:id="@+id/play_now"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="@dimen/padding_start"
+        android:text="@string/now_playing"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/play_now_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/play_now" />
+
+    <TextView
+        android:id="@+id/upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_start"
+        android:text="@string/upcoming"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_play_now" />
+
+    <include
+        android:id="@id/card_upcoming"
+        layout="@layout/upcoming_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upcoming" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:src="@drawable/home_icon1"
+        app:layout_constraintEnd_toStartOf="@id/favorites_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_upcoming" />
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/home_view"
+        app:layout_constraintStart_toStartOf="@id/home_view"
+        app:layout_constraintTop_toBottomOf="@id/home_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favorites_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:src="@drawable/love_favorite"
+        app:layout_constraintEnd_toStartOf="@id/ratings_view"
+        app:layout_constraintStart_toEndOf="@id/home_view"
+        app:layout_constraintTop_toBottomOf="@id/card_upcoming" />
+
+    <TextView
+        android:id="@+id/text_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorites"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/favorites_view"
+        app:layout_constraintStart_toStartOf="@id/favorites_view"
+        app:layout_constraintTop_toBottomOf="@id/favorites_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ratings_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:src="@drawable/signal_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/favorites_view"
+        app:layout_constraintTop_toBottomOf="@id/card_upcoming" />
+
+    <TextView
+        android:id="@+id/text_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ratings"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ratings_view"
+        app:layout_constraintStart_toStartOf="@id/ratings_view"
+        app:layout_constraintTop_toBottomOf="@id/ratings_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
